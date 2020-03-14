@@ -1,0 +1,15 @@
+
+
+<h3>Search Results</h3>
+<ul>
+    {% for book in books %}
+    <li>
+            <a href="{{ url_for('book', book_isbn=book.isbn)}}">
+                ISBN :{{ book.isbn }},
+                Title :{{book.title}},
+                Author :{{book.author}},
+                Year :{{book.year}}
+            </a>
+    </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+      <h1>Congratulations!</h1>
+    <h2>You've been registered.</h2>
+    <p class="lead">Click the Login button below and enter your credentials to start your session.</p>
+    {% if session.logged_in == NULL %}
+      <a href="/login" class="btn btn-success btn-lg">Login</a>
+    {% endif %}
+  </div>
+
+{% endblock %}
