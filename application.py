@@ -162,7 +162,7 @@ def book(book_isbn):
         return redirect("/book/"+ book_isbn)
     else:
 
-        books = db.execute("SELECT * FROM books WHERE isbn = :isbn", {"isbn": book_isbn}).fetchone()
+        book = db.execute("SELECT * FROM books WHERE isbn = :isbn", {"isbn": book_isbn}).fetchone()
 
     # Set up API - Goodreads : KEY = "dCb5gYyxdpbZIEBAJh9fg"
         res = requests.get("https://www.goodreads.com/book/review_counts.json",
