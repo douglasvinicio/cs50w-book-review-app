@@ -1,22 +1,26 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-  <div class="jumbotron text-center">
-    <h1>Welcome</h1>
-    <p class="lead">A website to review books! </p>
+
+
+
+    <div class="jumbotron text-center">
+    <h1> CS50 Book Reviewer </h1>
+    <p>A website to check and give your oppinion about a book. Let's dig in! </p>
+
+    {#If session is logged in Show buttons to Register and Login.#}
     {% if session.logged_in == NULL %}
       <a href="/register" class="btn btn-primary btn-lg">Register</a>
       <a href="/login" class="btn btn-success btn-lg">Login</a>
     {% endif %}
 
     {% if session.logged_in == True %}
-    <h3>Search for a book!</h3>
+
     <form action="/search" method="GET">
         <div class="form-group">
-            <input type="text" class="form-control" name="book" placeholder="ISBN, Title or Author">
-            <small id="bookHelp" class="form-text text-muted">Example: 0375508325, Cosmos or Carl Sagan</small>
+            <input type="text" class="form-control" name="book" placeholder="Title, ISBN, Author, Year..">
         </div>
-        <button class="btn btn-primary" type="submit">Procurar</button>
+        <button class="btn btn-primary" type="submit">Search</button>
     </form>
   {% endif %}
   </div>

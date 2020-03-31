@@ -1,15 +1,22 @@
+{% extends 'layout.html' %}
 
+{% block body %}
 
 <h3>Search Results</h3>
-<ul>
     {% for book in books %}
-    <li>
-            <a href="{{ url_for('book', book_isbn=book.isbn)}}">
-                ISBN :{{ book.isbn }},
-                Title :{{book.title}},
-                Author :{{book.author}},
-                Year :{{book.year}}
-            </a>
-    </li>
+		<div class="card card-inverse card-primary p-3 text-center">
+			<blockquote class="card-blockquote">
+				        <a class="mr-2" href="#">{{ book.author }}</a>
+        <p class="text-muted">Year : {{ book.year }} - ISBN : {{ book.isbn}}</p>
+
+				<footer>
+				<h2><a class="article-title" href="/book/{{book['isbn']}}">{{ book.title }}</a></h2>
+				</footer>
+			</blockquote>
+
+
+		</div>
     {% endfor %}
-</ul>
+{% endblock %} 
+
+
