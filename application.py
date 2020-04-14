@@ -1,5 +1,5 @@
 import os ,json , requests
-from flask import Flask, render_template, url_for, session, request, flash, redirect
+from flask import Flask, render_template, url_for, session, request, flash, redirect, jsonify
 from flask_session import Session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
@@ -182,33 +182,11 @@ def book(book_isbn):
 
     return render_template("book.html", book=book, avgrating=avgrating, rating_work=rating_work, reviews=reviews)
 
-@app.route("/api/<string:isbn>")
-def api(isbn):
-    data=db.execute("SELECT * FROM books WHERE isbn = :isbn",{"isbn":isbn}).fetchone()
-    if data==None:
-        return render_template('404.html')
-    res = requests.get("https://www.goodreads.com/book/review_counts.json", params={"key": "Cdjuz7jTYIwy5Jj9GhY9sw", "isbns": isbn})
-    average_rating=res.json()['books'][0]['average_rating']
-    work_ratings_count=res.json()['books'][0]['work_ratings_count']
-    x = {
-    "title": data.title,
-    "author": data.author,
-    "year": data.year,
-    "isbn": isbn,
-    "review_count": work_ratings_count,
-    "average_score": average_rating
-    }
-    api=json.dumps(x)
-    return render_template("api.json",api=api)
-
 @app.route("/api/<isbn>", methods=['GET'])
 def api_call(isbn):
-
-    # COUNT returns rowcount
-    # SUM returns sum selected cells' values
-    # INNER JOIN associates books with reviews tables
-
-    row = db.execute("SELECT title, author, year, isbn, \
+    
+    # Fetching single book by isbn
+    data = db.execute("SELECT title, author, year,isbn, \
                     COUNT(reviews.id) as review_count, \
                     AVG(reviews.rating) as average_score \
                     FROM books \
@@ -218,22 +196,13 @@ def api_call(isbn):
                     GROUP BY title, author, year, isbn",
                     {"isbn": isbn})
 
-    # Error checking
-    if row.rowcount != 1:
-        return jsonify({"Error": "Invalid book ISBN"}), 422
+    if data.rowcount != 1:
+        return jsonify({"Error": "Invalid book ISBN"}), 404
 
-    # Fetch result from RowProxy    
-    tmp = row.fetchone()
-
-    # Convert to dict
-    result = dict(tmp.items())
-
-    # Round Avg Score to 2 decimal. This returns a string which does not meet the requirement.
-    # https://floating-point-gui.de/languages/python/
+    data = data.fetchone()
+    result = dict(data.items())
     result['average_score'] = float('%.2f'%(result['average_score']))
-
     return jsonify(result)
-
     
 
 if __name__ == '__main__':

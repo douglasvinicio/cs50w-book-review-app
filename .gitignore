@@ -1,3 +1,5 @@
 flask_session
 __pycache__
 books.csv
+.idea
+flask_session
