@@ -37,9 +37,8 @@ Example : Set up API - Goodreads : KEY = "GOODREADS API KEY"
 
 - In a terminal window, navigate into your project1 directory.
 
-- Run pip3 install -r requirements.txt in your terminal window to make sure that all of the necessary Python packages (Flask and SQLAlchemy, for instance) are installed.
-
-- 
+- Run pip3 install -r requirements.txt in your terminal window to make sure that all of the necessary Python packages 
+(Flask and SQLAlchemy, for instance) are installed.
 
 - In your terminal window "FLASK_APP=application.py"; 
 - Set the enviroment variable to 1 with "FLASK_DEBUG=1" to activate the automatic reload of the server after changes in your code;
@@ -47,4 +46,3 @@ Example : Set up API - Goodreads : KEY = "GOODREADS API KEY"
 - Run "flask run" in your terminal;
 - Navigate to the url provided by Flask;
 ```
-
