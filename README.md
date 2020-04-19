@@ -31,7 +31,7 @@ $ https://github.com/douglasvinicio/cs50w-project1.git
 
 - Line 173 of apllication.py set your Goodreads API key.
 
-####Example : Set up API - Goodreads : KEY = "GOODREADS API KEY"
+Example : Set up API - Goodreads : KEY = "GOODREADS API KEY"
         res = requests.get("https://www.goodreads.com/book/review_counts.json",
                        params={"key": "GOODREADS API KEY", "isbns": book_isbn})
 
@@ -44,9 +44,7 @@ $ https://github.com/douglasvinicio/cs50w-project1.git
 - In your terminal window "FLASK_APP=application.py"; 
 - Set the enviroment variable to 1 with "FLASK_DEBUG=1" to activate the automatic reload of the server after changes in your code;
 - Set the database variable with : export DATABASE_URL=“(credentials provided by Heroku)“;
-- Run "flask run" in your terminal. 
-- Navigate to the url provided by Flask. 
-
-
+- Run "flask run" in your terminal;
+- Navigate to the url provided by Flask;
 ```
 
