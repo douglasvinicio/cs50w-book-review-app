@@ -195,7 +195,7 @@ def api_call(isbn):
                     WHERE isbn = :isbn \
                     GROUP BY title, author, year, isbn",
                     {"isbn": isbn})
-
+    #Make sure book exists.
     if data.rowcount != 1:
         return jsonify({"Error": "Invalid book ISBN"}), 404
 

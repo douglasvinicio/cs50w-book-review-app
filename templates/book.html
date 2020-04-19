@@ -18,6 +18,7 @@
   </div>
 
 </div>
+
 {#Dividing two cards / Book info / Goodread infos#}
 <div class="card text-center">
   <div class="card-header">
@@ -62,27 +63,24 @@
           <button class="btn btn-success" type="submit">Submit</button>
           </div>
           <div class="clearfix"></div>
-          <hr>
       </form>
 
 {% if reviews %}
     {% for review in reviews %}
-
-                            <div class="media-body">
-                                <span class="text-muted pull-right">
-                                <strong class="text-success">@{{review.username}}</strong>
-                                    <small class="text-muted">rated it {{review.rating}} out of 5 stars.</small>
-                                </span>
-                                <p class="comment">
-                                    {{review.comment}}
-                                </p>
-                            </div>
-                                      <div class="clearfix"></div>
-          <hr>
-                            {% endfor %}
-                {% endif %}
+        <div class="media-body">
+            <span class="text-muted pull-right">
+              <strong class="text-success">@{{review.username}}</strong>
+                <small class="text-muted">rated it {{review.rating}} out of 5 stars.</small>
+            </span>
+            <p class="comment">
+            {{review.comment}}
+            </p>
+        </div>
+      <div class="clearfix"></div>
+    {% endfor %}
+{% endif %}
                     
-                </div>
+    </div>
   </div>
 </div>
 
