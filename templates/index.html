@@ -6,12 +6,19 @@
 
     <div class="jumbotron text-center">
     <h1> CS50 Book Reviewer </h1>
-    <p>A website to check and give your oppinion about a book. Let's dig in! </p>
+    <p>Search for book reviews & share your opinion too! Let's dig in! </p>
 
     {#If session is logged in Show buttons to Register and Login.#}
     {% if session.logged_in == NULL %}
+
+<div class="card card-inverse card-primary p-3 text-center">
+          <p> Welcome! </p>
+          <p> If you don't have an account yet, please click the register button bellow! </p>
       <a href="/register" class="btn btn-primary btn-lg">Register</a>
+      <p> If you already have an account please Login!</p>
       <a href="/login" class="btn btn-success btn-lg">Login</a>
+       </div>
+
     {% endif %}
 
     {% if session.logged_in == True %}

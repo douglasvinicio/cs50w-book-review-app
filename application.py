@@ -60,7 +60,8 @@ def register():
 
         # Commit to Database
         db.commit()
-        return render_template('success.html')
+        return redirect(url_for('login'))
+        flash('No books found in the database. Try again!' , 'info')
     return render_template('register.html', form=form)
 
 #Logout

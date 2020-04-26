@@ -1,5 +1,7 @@
 # Project 1 - Book Reviewer 
 
+Project deployed at Heroku - https://dashboard.heroku.com/apps/cs50bookreviewer
+
 A website to rate, reviews and infos about books matching with GoodReads.com IPA database for 
 CS50W - Web Programming with Python and JavaScript
 
