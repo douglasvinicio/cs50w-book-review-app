@@ -1,6 +1,11 @@
-# Project 1 - Book Reviewer 
+# CS50W - Web Programming with Python and JavaScript - Project 1 - Book Reviewer 
 
-Project deployed at Heroku - https://dashboard.heroku.com/apps/cs50bookreviewer
+A website to rate, review and see info about books matching with data from GoodReads.com API.
+And also works as a API itself. 
+
+### Project Objectives and Requirements - https://docs.cs50.net/web/2020/x/projects/1/project1.html
+
+### Project deployed at Heroku - https://dashboard.heroku.com/apps/cs50bookreviewer
 
 A website to rate, reviews and infos about books matching with GoodReads.com IPA database for 
 CS50W - Web Programming with Python and JavaScript
@@ -11,6 +16,12 @@ CS50W - Web Programming with Python and JavaScript
 - Login. 
 - Search for a book using any of two search bars.
 - Choose your book to look infos, reviews and to give your own. 
+
+```
+To use the API function just type in your navigator the isbn number right after api/ : 
+
+http://127.0.0.1:5000/api/ "ISBN" 
+```
 
 ## Built With
 
@@ -33,22 +44,20 @@ $ https://github.com/douglasvinicio/cs50w-project1.git
 
 - Line 173 of apllication.py set your Goodreads API key.
 
-####Example : Set up API - Goodreads : KEY = "GOODREADS API KEY"
+Example : Set up API - Goodreads : KEY = "GOODREADS API KEY"
         res = requests.get("https://www.goodreads.com/book/review_counts.json",
                        params={"key": "GOODREADS API KEY", "isbns": book_isbn})
+```
 
+```
 - In a terminal window, navigate into your project1 directory.
 
-- Run pip3 install -r requirements.txt in your terminal window to make sure that all of the necessary Python packages (Flask and SQLAlchemy, for instance) are installed.
-
-- 
+- Run pip3 install -r requirements.txt in your terminal window to make sure that all of the necessary Python packages 
+(Flask and SQLAlchemy, for instance) are installed.
 
 - In your terminal window "FLASK_APP=application.py"; 
 - Set the enviroment variable to 1 with "FLASK_DEBUG=1" to activate the automatic reload of the server after changes in your code;
 - Set the database variable with : export DATABASE_URL=“(credentials provided by Heroku)“;
-- Run "flask run" in your terminal. 
-- Navigate to the url provided by Flask. 
-
-
+- Run "flask run" in your terminal;
+- Navigate to the url provided by Flask;
 ```
-
