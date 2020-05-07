@@ -17,8 +17,8 @@
 
 <!-- show case/gif section -->
 <p align="center">
-    <img alt="Events Maker - Creating user and Channel " height="300" src="https://media.giphy.com/media/ihYtw7oXgnkErkZ3Im/source.mp4" />
-    <img alt="Events Maker - Chat " height="300" src="https://media.giphy.com/media/fxT3gcB35y6m7ufAPE/source.mp4" />
+    <img alt="Events Maker - Creating user and Channel " height="300" src="https://media.giphy.com/media/fxT3gcB35y6m7ufAPE/giphy.gif" />
+    <img alt="Events Maker - Chat " height="300" src="https://media.giphy.com/media/ihYtw7oXgnkErkZ3Im/giphy.gif" />
 
   </a>
 </p>
