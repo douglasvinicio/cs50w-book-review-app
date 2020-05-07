@@ -1,27 +1,38 @@
 # CS50W - Web Programming with Python and JavaScript - Project 1 - Book Reviewer 
 
-A website to rate, review and see info about books matching with data from GoodReads.com API.
-And also works as a API itself. 
+
 
 ### Project Objectives and Requirements - https://docs.cs50.net/web/2020/x/projects/1/project1.html
 
 ### Project deployed at Heroku - https://dashboard.heroku.com/apps/cs50bookreviewer
 
-A website to rate, reviews and infos about books matching with GoodReads.com IPA database for 
-CS50W - Web Programming with Python and JavaScript
 
-## Usage
+<!-- header section -->
+<p align="center">
+  <img  alt="Events Maker  - Logo" src="https://trello-attachments.s3.amazonaws.com/5eab8674a86a907c46dbf222/1197x273/3a628bc6202989d1dbc47b749b1505ee/logo-events-maker.jpg" height="auto" /><br/>
+  <span>Book Reviewer CS50 <b> Python / Flask / PostgreSQL / Jinja2 </b></span><br/>
+  <span>A website to rate, review and see info about books matching with data from GoodReads.com API.
+  <b> And also works as a API itself.</b></span><br/>
+  <span>Running on <b>Safari , Chrome and Firefox </b>. </span><br/>
+</p>
 
-- Register. 
-- Login. 
-- Search for a book using any of two search bars.
-- Choose your book to look infos, reviews and to give your own. 
+<!-- show case/gif section -->
+<p align="center">
+    <img alt="Events Maker - Creating user and Channel " height="300" src="https://giphy.com/gifs/ihYtw7oXgnkErkZ3Im/html5" />
+    <img alt="Events Maker - Chat " height="300" src="https://giphy.com/gifs/fxT3gcB35y6m7ufAPE/html5" />
 
-```
-To use the API function just type in your navigator the isbn number right after api/ : 
+  </a>
+</p>
 
-http://127.0.0.1:5000/api/ "ISBN" 
-```
+
+## Website Functionalities 
+
+- Search for books
+- Reviews
+- Rating
+- API
+- goodreads.com data connected via API
+- Book covers
 
 ## Built With
 
@@ -30,34 +41,48 @@ http://127.0.0.1:5000/api/ "ISBN"
 * [Heroku](https://dashboard.heroku.com/login) - Used for database and deployment.
 * [PostgreSQL](https://www.postgresql.org/docs/) - DB System.
 
+## Obejctive
 
-### Prerequisites
+A website to get informations about books, using its own database with more than 5000 titles giving the user the option to 
+give its opinion and rate books. Also using the API from "goodreads.com to retrive information about the book selected.
 
-Python 3.6 or higher installed in your machine. 
 
-
-### Setting up your environemt. 
-
-```
-#Download or clone the repository on your machine. 
+### Let's run the app.
+#### Download or clone the repository on your machine. 
 $ https://github.com/douglasvinicio/cs50w-project1.git
 
-- Line 173 of apllication.py set your Goodreads API key.
 
-Example : Set up API - Goodreads : KEY = "GOODREADS API KEY"
-        res = requests.get("https://www.goodreads.com/book/review_counts.json",
-                       params={"key": "GOODREADS API KEY", "isbns": book_isbn})
-```
+##### Go to the folder application.
+##### Make sure you install a copy of Python 3.6 or higher.
+##### Make sure you have pip installed too. If not run this command : 
+$ python get-pip.py
+##### Install all dependencies :
+$ pip install -r requirements.txt
+##### Create a virtualenv :
+$ export FLASK_APP=application.py
+##### Set the DATABASE URL :
+$ export DATABASE_URL=" link provided by heroku postgres add-on "
+##### Run
+$ flask run
+##### Go to 127.0.0.1:5000 on your web browser.
 
-```
-- In a terminal window, navigate into your project1 directory.
+### Usage
 
-- Run pip3 install -r requirements.txt in your terminal window to make sure that all of the necessary Python packages 
-(Flask and SQLAlchemy, for instance) are installed.
+- Register. 
+- Login. 
+- Search for a book using any of two search bars.
+- Choose your book to look infos, reviews and to give your own. 
 
-- In your terminal window "FLASK_APP=application.py"; 
-- Set the enviroment variable to 1 with "FLASK_DEBUG=1" to activate the automatic reload of the server after changes in your code;
-- Set the database variable with : export DATABASE_URL=“(credentials provided by Heroku)“;
-- Run "flask run" in your terminal;
-- Navigate to the url provided by Flask;
-```
+To use the API function just type in your navigator the isbn number right after api/ : 
+
+http://127.0.0.1:5000/api/ "ISBN" 
+
+
+## Team
+
+<table>
+  <tr>
+    <td align="center"><a href="https://www.linkedin.com/in/douglasvinicio/"><img src="https://trello-attachments.s3.amazonaws.com/5eab8674a86a907c46dbf222/128x128/72740d1400b95b82bea9ea85b7c1b592/douglasvinicio.png" width="100px;" alt="Douglas Vinicio"/><br /><sub><b>Douglas Vinicio</b></sub></a><br /><a href="https://github.com/douglasvinicio"title="Code">💻</a></td>
+</table>
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
