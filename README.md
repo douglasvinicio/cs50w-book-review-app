@@ -11,15 +11,14 @@
 <p align="center">
   <img  alt="Events Maker  - Logo" src="https://trello-attachments.s3.amazonaws.com/5eab8674a86a907c46dbf222/1197x273/3a628bc6202989d1dbc47b749b1505ee/logo-events-maker.jpg" height="auto" /><br/>
   <span>Book Reviewer CS50 <b> Python / Flask / PostgreSQL / Jinja2 </b></span><br/>
-  <span>A website to rate, review and see info about books matching with data from GoodReads.com API.
-  <b> And also works as a API itself.</b></span><br/>
-  <span>Running on <b>Safari , Chrome and Firefox </b>. </span><br/>
+  <span>A website to rate, review and see info about books working together with goodreads.com API.<b> And also works as a API itself.</b><span><br>
+  <span>Running on <b>Safari, Chrome and Firefox </b>. </span><br/>
 </p>
 
 <!-- show case/gif section -->
 <p align="center">
-    <img alt="Events Maker - Creating user and Channel " height="300" src="https://giphy.com/gifs/ihYtw7oXgnkErkZ3Im/html5" />
-    <img alt="Events Maker - Chat " height="300" src="https://giphy.com/gifs/fxT3gcB35y6m7ufAPE/html5" />
+    <img alt="Events Maker - Creating user and Channel " height="300" src="https://media.giphy.com/media/ihYtw7oXgnkErkZ3Im/source.mp4" />
+    <img alt="Events Maker - Chat " height="300" src="https://media.giphy.com/media/fxT3gcB35y6m7ufAPE/source.mp4" />
 
   </a>
 </p>
@@ -66,6 +65,9 @@ $ export DATABASE_URL=" link provided by heroku postgres add-on "
 $ flask run
 ##### Go to 127.0.0.1:5000 on your web browser.
 
+##### To use the API function just type in your navigator the isbn number right after api/ : 
+- http://127.0.0.1:5000/api/ "ISBN" 
+
 ### Usage
 
 - Register. 
@@ -73,9 +75,7 @@ $ flask run
 - Search for a book using any of two search bars.
 - Choose your book to look infos, reviews and to give your own. 
 
-To use the API function just type in your navigator the isbn number right after api/ : 
 
-http://127.0.0.1:5000/api/ "ISBN" 
 
 
 ## Team
