@@ -9,7 +9,7 @@
 
 <!-- header section -->
 <p align="center">
-  <img  alt="Events Maker  - Logo" src="https://imgur.com/a/fgzuBir" height="auto" /><br/>
+  <img  alt="Events Maker  - Logo" src="https://i.ibb.co/wWh80X9/lo-ve.png" height="auto" /><br/>
   <span>Book Reviewer CS50 <b> Python / Flask / PostgreSQL / Jinja2 </b></span><br/>
   <span>A website to rate, review and see info about books working together with goodreads.com API.<b> And also works as a API itself.</b><span><br>
   <span>Running on <b>Safari, Chrome and Firefox </b>. </span><br/>
