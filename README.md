@@ -9,7 +9,7 @@
 
 <!-- header section -->
 <p align="center">
-  <img  alt="Events Maker  - Logo" src="https://trello-attachments.s3.amazonaws.com/5eab8674a86a907c46dbf222/1197x273/3a628bc6202989d1dbc47b749b1505ee/logo-events-maker.jpg" height="auto" /><br/>
+  <img  alt="Events Maker  - Logo" src="https://imgur.com/a/fgzuBir" height="auto" /><br/>
   <span>Book Reviewer CS50 <b> Python / Flask / PostgreSQL / Jinja2 </b></span><br/>
   <span>A website to rate, review and see info about books working together with goodreads.com API.<b> And also works as a API itself.</b><span><br>
   <span>Running on <b>Safari, Chrome and Firefox </b>. </span><br/>
@@ -17,9 +17,8 @@
 
 <!-- show case/gif section -->
 <p align="center">
-    <img alt="Events Maker - Creating user and Channel " height="300" src="https://media.giphy.com/media/fxT3gcB35y6m7ufAPE/giphy.gif" />
     <img alt="Events Maker - Chat " height="300" src="https://media.giphy.com/media/ihYtw7oXgnkErkZ3Im/giphy.gif" />
-
+    <img alt="Events Maker - Creating user and Channel " height="300" src="https://media.giphy.com/media/fxT3gcB35y6m7ufAPE/giphy.gif" />
   </a>
 </p>
 
