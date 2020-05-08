@@ -1,12 +1,4 @@
 # CS50W - Web Programming with Python and JavaScript - Project 1 - Book Reviewer 
-
-
-
-### Project Objectives and Requirements - https://docs.cs50.net/web/2020/x/projects/1/project1.html
-
-### Project deployed at Heroku - https://dashboard.heroku.com/apps/cs50bookreviewer
-
-
 <!-- header section -->
 <p align="center">
   <img  alt="Events Maker  - Logo" src="https://i.ibb.co/wWh80X9/lo-ve.png" height="auto" /><br/>
@@ -22,6 +14,11 @@
   </a>
 </p>
 
+
+
+### Project Objectives and Requirements - https://docs.cs50.net/web/2020/x/projects/1/project1.html
+
+### Project deployed at Heroku - https://dashboard.heroku.com/apps/cs50bookreviewer
 
 ## Website Functionalities 
 
