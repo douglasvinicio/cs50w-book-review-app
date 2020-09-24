@@ -18,7 +18,7 @@
 
 ### Project Objectives and Requirements - https://docs.cs50.net/web/2020/x/projects/1/project1.html
 
-### Project deployed at Heroku - https://dashboard.heroku.com/apps/cs50bookreviewer
+### Project deployed at Heroku - https://cs50bookreviewer.herokuapp.com
 
 ## Website Functionalities 
 
