@@ -1,9 +1,15 @@
 {% extends 'layout.html' %}
 
 {% block body %}
-<h1>Login</h1>
+
 {% from "includes/_formhelpers.html" import render_field%}
-<div class="form-group">
+<div class="row">
+<div class="col"></div>
+    <div class="col">
+
+    <div class="login-form-container">
+    <h1 class="text-center">Login</h1>
+    <div class="form-group">
 <form method="POST" action="">
     <label>Username</label>
     <input type="text" name="username" class="form-control" value={{request.form.username}}>
@@ -14,4 +20,10 @@
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+</div>
+</div>
+    <div class="col"></div>
+
+</div>
+
 {% endblock %}

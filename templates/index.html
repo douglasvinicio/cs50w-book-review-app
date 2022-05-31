@@ -12,23 +12,25 @@
     {% if session.logged_in == NULL %}
 
 <div class="card card-inverse card-primary p-3 text-center">
-          <p> Welcome! </p>
+    <div class="register-login-button-container">
           <p> If you don't have an account yet, please click the register button bellow! </p>
       <a href="/register" class="btn btn-primary btn-lg">Register</a>
+        <hr>
       <p> If you already have an account please Login!</p>
       <a href="/login" class="btn btn-success btn-lg">Login</a>
        </div>
-
+    </div>
     {% endif %}
 
     {% if session.logged_in == True %}
-
+<div class="search-form-home-page">
     <form action="/search" method="GET">
         <div class="form-group">
             <input type="text" class="form-control" name="book" placeholder="Title, ISBN, Author, Year..">
         </div>
         <button class="btn btn-primary" type="submit">Search</button>
     </form>
+</div>
   {% endif %}
   </div>
 

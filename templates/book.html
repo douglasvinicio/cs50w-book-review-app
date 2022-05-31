@@ -3,14 +3,13 @@
 {% block body %}
 
 <div class="card text-center">
-  <div class="card-header">
-    Book Info 
-  </div>
+      <h2 class="pt-3">Book Info</h2>
+        <hr>
   <div class="card-body">
           <div>
             <img src="http://covers.openlibrary.org/b/isbn/{{book.isbn}}-M.jpg" width="200px">    
         </div>
-    <h5 class="card-title">{{book.title}}</h5>
+    <h5 class="card-title pt-3">{{book.title}}</h5>
     <h6>Author : {{ book.author }}</h6>
     <h6>Year : {{ book.year }} </h6>
     <h6>ISBN : {{ book.isbn }}</h6>
@@ -18,26 +17,6 @@
   </div>
 
 </div>
-
-{#Dividing two cards / Book info / Goodread infos#}
-<div class="card text-center">
-  <div class="card-header">
-     GoodReads Reviews
- </div>
-  <div class="card-body">
-    <h6>Average Rating : {{ avgrating }}</h6>
-    <h6>Rated by {{ rating_work }} people.</h6>
-    <a href="https://www.goodreads.com/search?q={{book.isbn}}" class="btn btn-primary">More..</a>
-
-
-
-
-  </div>
-
-</div>
-
-{#Dividing two cards / Book info / Goodread infos#}
-
 
 <div class="card text-center">
   <div class="card-header">

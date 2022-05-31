@@ -130,7 +130,7 @@ def book(book_isbn):
     currentUser = session["username"]
 
     # Book_id by ISBN
-    row = db.execute("SELECT id FROM books WHERE isbn= :isbn",{"isbn": book_isbn})       
+    row = db.execute("SELECT id FROM books WHERE isbn= :isbn",{"isbn": book_isbn})
     #Save as a variable
     bookId = row.fetchone()
     bookId = bookId[0]
@@ -171,17 +171,7 @@ def book(book_isbn):
         book = db.execute("SELECT * FROM books WHERE isbn = :isbn", {"isbn": book_isbn}).fetchone()
         reviews = db.execute("SELECT * FROM reviews JOIN users ON reviews.users_id = users.id WHERE book_id = :book_id", {"book_id":bookId})
 
-    # Set up API - Goodreads : KEY = "dCb5gYyxdpbZIEBAJh9fg"
-        res = requests.get("https://www.goodreads.com/book/review_counts.json",
-                       params={"key": "dCb5gYyxdpbZIEBAJh9fg", "isbns": book_isbn})
-
-    #Data from Json API.
-        data = res.json()
-        avgrating = data["books"][0]["average_rating"]
-        rating_work = data["books"][0]["work_ratings_count"]
-
-
-    return render_template("book.html", book=book, avgrating=avgrating, rating_work=rating_work, reviews=reviews)
+    return render_template("book.html", book=book, reviews=reviews)
 
 @app.route("/api/<isbn>", methods=['GET'])
 def api_call(isbn):
