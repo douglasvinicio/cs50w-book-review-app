@@ -1,8 +1,9 @@
-wtforms
 Flask
 Flask-Session
+flask-socketio
 psycopg2-binary
 SQLAlchemy
 gunicorn
 requests
+wtforms
 passlib
