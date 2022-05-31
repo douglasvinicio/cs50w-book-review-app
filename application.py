@@ -1,5 +1,6 @@
 import os ,json , requests
 from flask import Flask, render_template, url_for, session, request, flash, redirect, jsonify
+from flask_socketio import SocketIO
 from flask_session import Session
 from sqlalchemy import create_engine
 from sqlalchemy.orm import scoped_session, sessionmaker
@@ -8,6 +9,7 @@ from passlib.hash import sha256_crypt
 
 app = Flask(__name__)
 app.secret_key = b'_5#y2L"Rq45z\n\xec]/'
+socketio = SocketIO(app)
 
 # Check for environment variable
 if not os.getenv("DATABASE_URL"):
@@ -197,4 +199,4 @@ def api_call(isbn):
     
 
 if __name__ == '__main__':
-    app.run()
+    socketio.run(app)
